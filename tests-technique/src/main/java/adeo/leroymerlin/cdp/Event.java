@@ -13,7 +13,7 @@ public class Event {
 
     private String imgUrl;
 
-    @OneToMany(fetch=FetchType.EAGER)
+    @OneToMany(fetch=FetchType.EAGER, cascade = {CascadeType.ALL})
     private Set<Band> bands;
 
     private Integer nbStars;
@@ -66,5 +66,17 @@ public class Event {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", bands=" + bands +
+                ", nbStars=" + nbStars +
+                ", comment='" + comment + '\'' +
+                '}';
     }
 }

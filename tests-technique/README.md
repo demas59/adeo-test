@@ -27,6 +27,9 @@ understand the steps during the interview
 ```
 
 1. Adding review does not work
+   * Identifing what API call the adding of a review trigger: EventController -> updateEvent is empty
+   * No persistence action is trigger
+   * Modification of the EventRepository to persist an Event Instance -> error: Bands contained in Event Instance are not persisted -> no Repository configure for the Band Entity
 2. Using the delete button works but elements comes back when i refresh the page 
 
 ## New Feature

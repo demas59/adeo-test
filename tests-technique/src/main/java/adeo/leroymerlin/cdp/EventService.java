@@ -23,10 +23,16 @@ public class EventService {
         eventRepository.delete(id);
     }
 
+    public Event saveEvent(Event event){return eventRepository.save(event);}
+
     public List<Event> getFilteredEvents(String query) {
         List<Event> events = eventRepository.findAllBy();
         // Filter the events list in pure JAVA here
 
         return events;
+    }
+
+    public Event updateEvent(Event event){
+        return eventRepository.save(event);
     }
 }
