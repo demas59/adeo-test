@@ -41,13 +41,13 @@ public class EventService {
                         members.add(member);
                     }
                 }
-                if(members.size() > 0){
+                if(!members.isEmpty()){
                     band.setName(band.getName()+" ["+members.size()+"]");
                     band.setMembers(members);
                     bands.add(band);
                 }
             }
-            if(bands.size() > 0){
+            if(!bands.isEmpty()){
                 event.setTitle(event.getTitle()+" ["+bands.size()+"]" );
                 event.setBands(bands);
                 results.add(event);
