@@ -6,6 +6,16 @@ import java.util.Set;
 @Entity
 public class Band {
 
+    public Band() {
+
+    }
+
+    public Band(Band band){
+        this.id = band.id;
+        this.name = band.name;
+        this.members = band.members;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

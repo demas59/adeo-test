@@ -42,9 +42,11 @@ public class EventService {
                     }
                 }
                 if(!members.isEmpty()){
-                    band.setName(band.getName()+" ["+members.size()+"]");
-                    band.setMembers(members);
-                    bands.add(band);
+                    //It is needed to use a tmp object here to avoid duplication of the length information
+                    Band tmpBand = new Band(band);
+                    tmpBand.setName(tmpBand.getName()+" ["+members.size()+"]");
+                    tmpBand.setMembers(members);
+                    bands.add(tmpBand);
                 }
             }
             if(!bands.isEmpty()){
